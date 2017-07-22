@@ -72,7 +72,7 @@ then
 		commit_message="$(git log -1 --pretty=%B)"
 	elif [ "$1" == '-m' ]
 	then
-		[ $# -ge 2 ] || { error "-m requires a message" ; exit $ERROR_ARGS }
+		[ $# -ge 2 ] || { error "-m requires a message" ; exit $ERROR_ARGS ; }
 		commit_message="$2"
 	else
 		echo "Message for deploy commit (leave empty to use last commit in source repo):"
@@ -87,23 +87,28 @@ fi
 if [ ! -a "$deploy_dir" ]
 then
 	echo "Deploy dir is missing; cloning..."
-	git clone "git@github.com:$deploy_repo.git" "$deploy_dir" || { error "could not clone repo: $deploy_repo" ; exit $ERROR_GIT }
+	git clone "git@github.com:$deploy_repo.git" "$deploy_dir" || { error "could not clone repo: $deploy_repo" ; exit $ERROR_GIT ; }
 fi
 
 # make sure deploy dir is a valid directory
 check_permissions "$deploy_dir" || exit $ERROR_FS
 
 # now build with hugo
-hugo || { error "could not build site" ; exit $ERROR_HUGO }
+hugo || { error "could not build site" ; exit $ERROR_HUGO ; }
 
 # make sure publish dir is a valid directory
 check_permissions "$publish_dir" || exit $ERROR_FS
 
 # copy it into the build dir and commit it
-cp -R "$publish_dir"/* "$deploy_dir" || { error "could not copy site into deploy dir" ; exit $ERROR_FS }
+cd "$deploy_dir"
+git fetch . || { error "could not perform fetch on deployment repo" ; exit $ERROR_GIT ; }
+git checkout "$deploy_branch" || { error "could not checkout branch $deploy_branch" ; exit $ERROR_GIT ; }
+git pull || { error "could not pull branch $deploy_branch" ; exit $ERROR_GIT ; }
+cd ..
+cp -R "$publish_dir"/* "$deploy_dir" || { error "could not copy site into deploy dir" ; exit $ERROR_FS ; }
 cd "$deploy_dir"
 git add . || { error "could not stage new files for commit" ; exit $ERROR_GIT }
-git commit -m "$commit_message" || { error "could not create commit" ; exit $ERROR_GIT }
-git push origin "$deploy_branch" || { error "could not push commit" ; exit $ERROR_GIT }
+git commit -m "$commit_message" || { error "could not create commit" ; exit $ERROR_GIT ; }
+git push origin "$deploy_branch" || { error "could not push commit" ; exit $ERROR_GIT ; }
 cd ..
 
