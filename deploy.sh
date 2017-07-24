@@ -101,7 +101,8 @@ fi
 # make sure deploy dir is a valid directory
 check_permissions "$deploy_dir" || exit $ERROR_FS
 
-# now build with hugo
+# wipe the old build and create another with hugo
+rm -rf "$publish_dir" || { error "could not rm current publish dir" ; exit $ERROR_FS ; }
 hugo || { error "could not build site" ; exit $ERROR_HUGO ; }
 
 # make sure publish dir is a valid directory
@@ -113,7 +114,7 @@ git fetch || { error "could not perform fetch on deployment repo" ; exit $ERROR_
 git checkout "$deploy_branch" || { error "could not checkout branch $deploy_branch" ; exit $ERROR_GIT ; }
 git pull || { error "could not pull branch $deploy_branch" ; exit $ERROR_GIT ; }
 # erase current contents:
-rm -rf *
+rm -rf * || { error "could not rm current contents of repo" ; exit $ERROR_FS ; }
 cd ..
 cp -R "$publish_dir"/* "$deploy_dir" || { error "could not copy site into deploy dir" ; exit $ERROR_FS ; }
 cd "$deploy_dir"
