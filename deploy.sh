@@ -112,6 +112,8 @@ cd "$deploy_dir"
 git fetch || { error "could not perform fetch on deployment repo" ; exit $ERROR_GIT ; }
 git checkout "$deploy_branch" || { error "could not checkout branch $deploy_branch" ; exit $ERROR_GIT ; }
 git pull || { error "could not pull branch $deploy_branch" ; exit $ERROR_GIT ; }
+# erase current contents:
+rm -rf *
 cd ..
 cp -R "$publish_dir"/* "$deploy_dir" || { error "could not copy site into deploy dir" ; exit $ERROR_FS ; }
 cd "$deploy_dir"
