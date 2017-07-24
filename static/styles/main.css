@@ -1,5 +1,5 @@
 /* define default styling for html5 */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
-section {
+section, main {
 	display:block;
 }

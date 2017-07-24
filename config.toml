@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "Moe Serifu"
 enableRobotsTXT = true
 hasCJKLanguage = true
+
+[params]
+	tagline = "A digital character in your home"

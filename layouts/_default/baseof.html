@@ -2,12 +2,29 @@
 <html lang="{{ .Site.Language.Lang }}">
 	<head>
 		<meta charset="utf-8" />
-		<title>{{ .Site.Title }}</title>
+		<title>{{ block "title" . }}
+			{{ .Site.Title }}
+		{{ end }}</title>
 		<link rel="stylesheet" href="styles/main.css" />
 		<link rel="alternate" type="application/atom+xml" title="News Feed" href="{{ .Site.RSSLink }}" />
 		{{ partial "iecompat.html" . }}
 	</head>
 	<body>
-	
+		{{ block "header" . }}
+			{{ partial "header/site-header.html" . }}
+		{{ end }}
+		
+		{{ block "main" . }}
+		<article class="default-content">
+			<h1>Default Content</h1>
+			<p>If you are seeing this, then the page you have accessed exists but does not correctly
+			define a 'main' block. Please check this page's content for errors and then re-generate
+			the page.</p>
+		</article>
+		{{ end }}
+		
+		{{ block "footer" . }}
+			{{ partial "footer/site-footer.html" . }}
+		{{ end }}
 	</body>
 </html>
