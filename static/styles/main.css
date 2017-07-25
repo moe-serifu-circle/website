@@ -18,6 +18,21 @@ body {
 	background-color: #ffffff;
 }
 
+header#site-header, footer#site-footer {
+	padding: 1px;
+}
+
+/* change bg to make layout easier
+ TODO: remove when done with layout */
+header, footer {
+	background-color: lightblue;
+}
+main {
+	background-color: lightgreen;
+	padding-top: 1px; /* MARGIN COLLAPSE FIX for layout; TODO: remove */
+	padding-bottom: 1px; /* MARGIN COLLAPSE FIX for layout; TODO: remove */
+}
+
 /* These divs has no semantic purpose; they are used for styling only */
 
 div#wrap {
@@ -36,6 +51,7 @@ div.wrap-border {
 div#wrap-content {
 	margin: 0px 5px;
 	background-color: pink;
+	padding-top: 50px;
 }
 
 div#wrap-left {
