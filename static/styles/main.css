@@ -3,3 +3,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 section, main {
 	display:block;
 }
+
+html {
+	background-color: #d2d9f0;
+	background-image: url('../images/circuit-bg.png');
+	background-size: 140px 140px;
+	background-position: 20px 10px;
+}
+
+body {
+	max-width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #ffffff;
+}
