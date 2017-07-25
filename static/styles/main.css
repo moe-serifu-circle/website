@@ -17,3 +17,32 @@ body {
 	margin-left: auto;
 	background-color: #ffffff;
 }
+
+/* These divs has no semantic purpose; they are used for styling only */
+
+div#wrap {
+	/* do relative position so child elements with absolute position use this
+	div as the reference point. */
+	position: relative;
+}
+
+div.wrap-border {
+	background-color: #aaaaaa;
+	height: 100%;
+	width: 5px;
+	position: absolute;
+}
+
+div#wrap-content {
+	margin: 0px 5px;
+	background-color: pink;
+}
+
+div#wrap-left {
+	left: 0;
+}
+
+div#wrap-right {
+	right: 0;
+	top: 0;
+}
