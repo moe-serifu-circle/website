@@ -1,0 +1,47 @@
+/*
+ * wrap3col
+ *
+ * Defines classes for doing a 3 column layout. The middle column is the
+ * content, and the right and left columns will stretch in height to whatever
+ * the middle ends up being.
+ *
+ * The height of the middle is determined by its content.
+ *
+ * To use, apply the top-level class 'wrap3col' to a container element. Then,
+ * add elements with classes 'wrap3col-left', 'wrap3col-mid', and
+ * 'wrap3col-right' in that order. Then, apply a width to the left and right
+ * columns, and set the right and left margins of the middle column to the
+ * widths of each side. Put the content inside the middle column.
+ *
+ * EXAMPLE:
+ * <div class="wrap3col">
+ *  <div class="wrap3col-left" style="width: 5px;"></div>
+ *  <div class="wrap3col-mid" style="margin-right: 5px; margin-left: 5px;">
+ *    CONTENT HERE
+ *  </div>
+ *  <div class="wrap3col-right" style="width: 5px;"></div>
+ * </div>
+ */
+.wrap3col {
+	/* do relative position so child elements with absolute position use this
+	div as the reference point. */
+	position: relative;
+}
+
+.wrap3col-mid {
+	margin: 0px;
+}
+
+.wrap3col-left, .wrap3col-right {
+	position: absolute;
+	height: 100%;
+}
+
+.wrap3col-left {
+	left: 0;
+}
+
+.wrap3col-right {
+	right: 0;
+	top: 0;
+}

@@ -19,7 +19,8 @@ body {
 }
 
 header#site-header, footer#site-footer {
-	padding: 1px;
+	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
+	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
 }
 
 /* change bg to make layout easier
@@ -27,38 +28,22 @@ header#site-header, footer#site-footer {
 header, footer {
 	background-color: lightblue;
 }
+
 main {
 	background-color: lightgreen;
-	padding-top: 1px; /* MARGIN COLLAPSE FIX for layout; TODO: remove */
-	padding-bottom: 1px; /* MARGIN COLLAPSE FIX for layout; TODO: remove */
+	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
+	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
 }
 
 /* These divs has no semantic purpose; they are used for styling only */
-
-div#wrap {
-	/* do relative position so child elements with absolute position use this
-	div as the reference point. */
-	position: relative;
-}
-
-div.wrap-border {
-	background-color: #aaaaaa;
-	height: 100%;
-	width: 5px;
-	position: absolute;
-}
-
-div#wrap-content {
-	margin: 0px 5px;
+div.content-wrap {
+	margin-right: 5px;
+	margin-left: 5px;
 	background-color: pink;
 	padding-top: 50px;
 }
 
-div#wrap-left {
-	left: 0;
-}
-
-div#wrap-right {
-	right: 0;
-	top: 0;
+div.content-border {
+	background-color: #aaaaaa;
+	width: 5px;
 }

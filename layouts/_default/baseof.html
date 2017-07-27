@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 		<link rel="stylesheet" href="/styles/main.css" />
+		<link rel="stylesheet" href="/styles/wrap3col.css" />
 		<link rel="alternate" type="application/atom+xml" title="News Feed" href="{{ .Site.RSSLink }}" />
 		{{ partial "iecompat.html" . }}
 	</head>
@@ -12,9 +13,9 @@
 			{{ partial "header/site-header.html" . }}
 		{{ end }}
 		
-		<div id="wrap">
-			<div id="wrap-left" class="wrap-border"></div>
-			<div id="wrap-content">
+		<div class="wrap3col">
+			<div class="wrap3col-left content-border"></div>
+			<div class="wrap3col-mid content-wrap">
 				{{ block "main" . }}
 				<main>
 					<article class="default-content">
@@ -26,7 +27,7 @@
 				</main>
 				{{ end }}
 			</div>
-			<div id="wrap-right" class="wrap-border"></div>
+			<div class="wrap3col-right content-border"></div>
 		</div>
 		
 		{{ block "footer" . }}
