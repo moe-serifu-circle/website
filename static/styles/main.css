@@ -47,3 +47,13 @@ div.content-border {
 	background-color: #aaaaaa;
 	width: 5px;
 }
+
+div.header-wrap {
+	margin-right: 20px;
+	margin-left: 20px;
+	background-color: aqua;
+}
+
+div.header-border {
+	width: 20px;
+}
