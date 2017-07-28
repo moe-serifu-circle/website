@@ -54,7 +54,8 @@ div.content-border {
 	width: 5px;
 }
 
-div.header-wrap {
+/* hf for 'header' and 'footer'; these classes apply to both */
+div.hf-wrap {
 	margin-right: 20px;
 	margin-left: 20px;
 	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
@@ -62,6 +63,6 @@ div.header-wrap {
 	background-color: aqua;
 }
 
-div.header-border {
+div.hf-border {
 	width: 20px;
 }
