@@ -18,11 +18,6 @@ body {
 	background-color: #ffffff;
 }
 
-header#site-header, footer#site-footer {
-	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
-	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
-}
-
 /* change bg to make layout easier
  TODO: remove when done with layout */
 header, footer {
@@ -33,6 +28,17 @@ main {
 	background-color: lightgreen;
 	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
 	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
+}
+
+.screw {
+	display: block;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url('/images/screw.png');
+	background-size: 13px;
+	width: 13px;
+	height: 13px;
 }
 
 /* These divs has no semantic purpose; they are used for styling only */
@@ -51,6 +57,8 @@ div.content-border {
 div.header-wrap {
 	margin-right: 20px;
 	margin-left: 20px;
+	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
+	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
 	background-color: aqua;
 }
 

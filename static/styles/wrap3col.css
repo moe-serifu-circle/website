@@ -39,9 +39,11 @@
 
 .wrap3col-left {
 	left: 0;
+	overflow: hidden;
 }
 
 .wrap3col-right {
 	right: 0;
 	top: 0;
+	overflow: hidden;
 }
