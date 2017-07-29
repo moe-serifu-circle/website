@@ -4,13 +4,9 @@
 	<nav id="social-links">
 		<h1>// TODO: Follow</h1>
 		{{ range $.Site.Data.links }}
-		<p>
-			<a href="{{ .url }}"><img src="/images/icons/{{ .icon }}" class="icon">{{ .title }}</a>
-		</p>
+		<a href="{{ .url }}"><img src="/images/icons/{{ .icon }}" class="icon">{{ .title }}</a>
 		{{ end }}
-		<p>
-			<a href="{{ .Site.RSSLink }}"><img src="/images/icons/rss.png" class="icon">RSS Feed</a>
-		</p>
+		<a href="{{ .Site.RSSLink }}"><img src="/images/icons/rss.png" class="icon">RSS Feed</a>
 	</nav>
 	<article class="panel">
 		<h1>Panel 1</h1>

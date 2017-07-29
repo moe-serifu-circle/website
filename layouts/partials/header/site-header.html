@@ -8,12 +8,15 @@
 				<h1>{{ .Site.Title }}</h1>
 				<h2>{{ .Site.Params.tagline }}</h2>
 			</hgroup>
+			<nav>
+				<a href="/">Home</a>
+				{{ range where .Site.Pages "Type" "top" }}
+				<a href="{{ .URL }}">{{ .Title }}</a>
+				{{ end }}
+			</nav>
 		</div>
 		<div class="wrap3col-right hf-border">
 			<div class="screw corner-tr"></div>
 		</div>
 	</div>
-	<nav>
-	
-	</nav>
 </header>
