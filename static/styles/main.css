@@ -41,6 +41,26 @@ main {
 	height: 13px;
 }
 
+.corner-tl, .corner-tr, .corner-bl, .corner-br {
+	position: absolute;
+}
+
+.corner-tl, .corner-tr {
+	top: 4px;
+}
+
+.corner-tl, .corner-bl {
+	left: 4px;
+}
+
+.corner-tr, .corner-br {
+	right: 4px;
+}
+
+.corner-bl, .corner-br {
+	bottom: 4px;
+}
+
 /* These divs has no semantic purpose; they are used for styling only */
 div.content-wrap {
 	margin-right: 5px;

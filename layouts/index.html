@@ -1,6 +1,17 @@
 {{ define "main" }}
 <main>
 	<h1>{{ .Title }}</h1>
+	<nav id="social-links">
+		<h1>// TODO: Follow</h1>
+		{{ range $.Site.Data.links }}
+		<p>
+			<a href="{{ .url }}"><img src="/images/icons/{{ .icon }}" class="icon">{{ .title }}</a>
+		</p>
+		{{ end }}
+		<p>
+			<a href="{{ .Site.RSSLink }}"><img src="/images/icons/rss.png" class="icon">RSS Feed</a>
+		</p>
+	</nav>
 	<article class="panel">
 		<h1>Panel 1</h1>
 	</article>
