@@ -63,11 +63,21 @@ main {
 
 .circuits-back {
 	background-image: url('/images/circuit-small.png');
+	position: absolute;
+	width: 100%;
+}
+
+.pos-anchor {
+	position: relative;
+}
+
+#site-header .circuits-back {
+	bottom: 3px;
 }
 
 .circuits-back .hf-wrap {
 	height: 40px;
-	background-color: transparent;
+	background-color: transparent; /* TODO: for layout; remove */
 }
 
 /* These divs has no semantic purpose; they are used for styling only */
