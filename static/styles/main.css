@@ -61,6 +61,15 @@ main {
 	bottom: 4px;
 }
 
+.circuits-back {
+	background-image: url('/images/circuit-small.png');
+}
+
+.circuits-back .hf-wrap {
+	height: 40px;
+	background-color: transparent;
+}
+
 /* These divs has no semantic purpose; they are used for styling only */
 div.content-wrap {
 	margin-right: 5px;
