@@ -71,8 +71,14 @@ main {
 	position: relative;
 }
 
+#site-header {
+	position: relative;
+	z-index: 0;
+}
+
 #site-header .circuits-back {
 	bottom: 3px;
+	z-index: -1;
 }
 
 .circuits-back .hf-wrap {
