@@ -17,6 +17,9 @@
 	</article>
 	{{ end }}
 	<article class="preview-panel news">
+		{{ range .Site.Pages }}
+			<p>{{ .Section }} - {{ .Title }}</p>
+		{{ end }}
 		<div class="panel-header">
 			<h1>News</h1>
 			<img src="/images/icons/news.png" />
