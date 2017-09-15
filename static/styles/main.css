@@ -132,7 +132,6 @@ footer .hf-wrap {
 }
 
 div.hf-inner-horz-edge {
-	background-color: red;
-	padding-top: 1px;
-	height: 7px;
+	background-image: url('/images/horz-edge.png');
+	height: 8px;
 }

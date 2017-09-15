@@ -4,6 +4,10 @@ div.hf-border {
 	width: 8px;
 }
 
+div.hf-margin img, div.hf-border img {
+	display: block;
+}
+
 div.hf-margin {
 	width: 20px;
 	background-color: purple;
@@ -31,7 +35,7 @@ div.hf-inner .hf-border-sweep-outer {
 }
 
 div.hf-inner .hf-border-side {
-	background-color: pink;
+	background-image: url('/images/vert-edge.png');
 	height: 100%;
 }
 
@@ -42,7 +46,7 @@ div.hf-inner .hf-border-curve {
 
 div.hf-inner .hf-margin-sweep-inner {
 	background-color: red;
-	height: 6px;
+	height: 34px;
 }
 
 div.hf-inner .hf-margin-side {
