@@ -1,0 +1,25 @@
+{{/*
+This partial needs to know if it is on the left or right side of the screen, and whether it is in the
+header or footer. Pass in an array, where first element is 'header' or 'footer', and second element is
+'left' or 'right' as the context.
+*/}}
+
+{{ $hf := (index . 0) }}
+{{ $side := (index . 1) }}
+
+<div class="wrap3col-{{ $side }} hf-border">
+	<div class="hf-inner">
+{{ if eq $hf "footer" }}
+		<div class="hf-border-filler"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-sweep-outer"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-side"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-curve"><img src="/images/spacer.png" /></div>
+{{ else if eq $hf "header" }}
+{{/* same elements, but in reverse order */}}
+		<div class="hf-border-curve"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-side"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-sweep-outer"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-filler"><img src="/images/spacer.png" /></div>
+{{ end }}
+	</div>
+</div>

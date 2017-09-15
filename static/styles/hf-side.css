@@ -1,0 +1,56 @@
+/* Contains definitions for the header and footer side borders/margins */
+
+div.hf-border {
+	width: 8px;
+}
+
+div.hf-margin {
+	width: 20px;
+	background-color: purple;
+}
+
+div.hf-inner {
+	background-color: yellow;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+div.hf-inner div {
+	display: table-row;
+}
+
+div.hf-inner .hf-border-filler {
+	background-color: green;
+	height: 28px;
+}
+
+div.hf-inner .hf-border-sweep-outer {
+	background-color: red;
+	height: 6px;
+}
+
+div.hf-inner .hf-border-side {
+	background-color: pink;
+	height: 100%;
+}
+
+div.hf-inner .hf-border-curve {
+	background-color: red;
+	height: 24px;
+}
+
+div.hf-inner .hf-margin-sweep-inner {
+	background-color: red;
+	height: 6px;
+}
+
+div.hf-inner .hf-margin-side {
+	background-color: pink;
+	height: 100%;
+}
+
+div.hf-inner .hf-margin-curve {
+	background-color: red;
+	height: 20px;
+}

@@ -5,6 +5,7 @@
 		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 		<link rel="stylesheet" href="/styles/main.css" />
 		<link rel="stylesheet" href="/styles/wrap3col.css" />
+		<link rel="stylesheet" href="/styles/hf-side.css" />
 		<link rel="alternate" type="application/atom+xml" title="News Feed" href="{{ .Site.RSSLink }}" />
 		{{ partial "iecompat.html" . }}
 	</head>
@@ -13,7 +14,7 @@
 			{{ partial "header/site-header.html" . }}
 		{{ end }}
 		
-		<div class="wrap3col">
+		<div class="wrap3col content-border-wrap">
 			<div class="wrap3col-left content-border"></div>
 			<div class="wrap3col-mid content-wrap">
 				{{ block "main" . }}

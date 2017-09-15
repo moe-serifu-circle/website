@@ -12,10 +12,10 @@ html {
 }
 
 body {
-	max-width: 900px;
+	/* max-width of body is 900px + main header's border (both sides) */
+	max-width: 916px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #ffffff;
 }
 
 /* change bg to make layout easier
@@ -58,7 +58,7 @@ main {
 }
 
 .corner-bl, .corner-br {
-	bottom: 4px;
+	bottom: 12px;
 }
 
 .circuits-back {
@@ -81,6 +81,12 @@ main {
 	z-index: -1;
 }
 
+footer {
+	font-size: 0.6em;
+	font-family: Verdana, sans-serif;
+	text-align: center;
+}
+
 .circuits-back .hf-wrap {
 	height: 40px;
 	background-color: transparent; /* TODO: for layout; remove */
@@ -92,20 +98,41 @@ div.content-wrap {
 	margin-left: 5px;
 }
 
+div.content-border-wrap {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 div.content-border {
 	background-color: #aaaaaa;
 	width: 5px;
 }
 
-/* hf for 'header' and 'footer'; these classes apply to both */
-div.hf-wrap {
+div.hf-content {
 	margin-right: 20px;
 	margin-left: 20px;
-	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
-	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
-	background-color: aqua;
+	padding-top: 1px;
 }
 
-div.hf-border {
-	width: 20px;
+div.hf-wrap {
+	margin: 0 8px;
+}
+
+div.hf-outer-horz-edge {
+	background-color: red;
+	margin-right: 28px;
+	margin-left: 28px;
+	height: 8px;
+}
+
+footer .hf-wrap {
+	border-bottom-left-radius: 26px 24px;
+	border-bottom-right-radius: 26px 24px;
+}
+
+div.hf-inner-horz-edge {
+	background-color: red;
+	padding-top: 1px;
+	height: 7px;
 }
