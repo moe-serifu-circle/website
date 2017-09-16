@@ -11,7 +11,6 @@ html {
 	background-position: 20px 10px;
 	background-attachment: fixed;
 	image-rendering: -webkit-optimize-contrast;
-	height: 100%;
 }
 
 body {
@@ -19,7 +18,7 @@ body {
 	max-width: 916px;
 	margin-right: auto;
 	margin-left: auto;
-	height: 100%;
+	margin-top: 0;
 }
 
 main {
