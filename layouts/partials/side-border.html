@@ -7,16 +7,18 @@ header or footer. Pass in an array, where first element is 'header' or 'footer',
 {{ $hf := (index . 0) }}
 {{ $side := (index . 1) }}
 
+{{ $s1 := substr $side 0 1 }}
+
 <div class="wrap3col-{{ $side }} hf-border">
 	<div class="hf-inner">
 {{ if eq $hf "footer" }}
 		<div class="hf-border-filler"><img src="/images/spacer.png" /></div>
 		<div class="hf-border-sweep-outer"><img src="/images/spacer.png" /></div>
 		<div class="hf-border-side"><img src="/images/spacer.png" /></div>
-		<div class="hf-border-curve"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-curve"><img class="corner-b{{ $s1 }}" src="/images/corner-b{{ $s1 }}.png" /></div>
 {{ else if eq $hf "header" }}
 {{/* same elements, but in reverse order */}}
-		<div class="hf-border-curve"><img src="/images/spacer.png" /></div>
+		<div class="hf-border-curve"><img class="corner-t{{ $s1 }}" src="/images/corner-t{{ $s1 }}.png" /></div>
 		<div class="hf-border-side"><img src="/images/spacer.png" /></div>
 		<div class="hf-border-sweep-outer"><img src="/images/spacer.png" /></div>
 		<div class="hf-border-filler"><img src="/images/spacer.png" /></div>

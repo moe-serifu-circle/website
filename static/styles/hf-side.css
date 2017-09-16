@@ -2,6 +2,7 @@
 
 div.hf-border {
 	width: 8px;
+	overflow: visible;
 }
 
 div.hf-margin img, div.hf-border img {
@@ -10,11 +11,9 @@ div.hf-margin img, div.hf-border img {
 
 div.hf-margin {
 	width: 20px;
-	background-color: purple;
 }
 
 div.hf-inner {
-	background-color: yellow;
 	display: table;
 	height: 100%;
 	width: 100%;
@@ -40,8 +39,16 @@ div.hf-inner .hf-border-side {
 }
 
 div.hf-inner .hf-border-curve {
-	background-color: red;
-	height: 24px;
+	height: 28px;
+}
+
+.corner-bl, .corner-br, .corner-tl, .corner-tr {
+	position: absolute;
+	display: block;
+}
+
+.corner-br, .corner-tr {
+	right: 0px;
 }
 
 div.hf-inner .hf-margin-sweep-inner {
@@ -50,11 +57,9 @@ div.hf-inner .hf-margin-sweep-inner {
 }
 
 div.hf-inner .hf-margin-side {
-	background-color: pink;
 	height: 100%;
 }
 
 div.hf-inner .hf-margin-curve {
-	background-color: red;
 	height: 20px;
 }

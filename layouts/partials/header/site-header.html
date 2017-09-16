@@ -1,37 +1,30 @@
 <header id="site-header">
 	<div class="wrap3col">
-		<div class="wrap3col-left hf-border">
-			<div class="screw corner-tl"></div>
-		</div>
+		{{ partial "side-border.html" (slice "header" "left") }}
 		<div class="wrap3col-mid hf-wrap">
-			<hgroup>
-				<h1>{{ .Site.Title }}</h1>
-				<h2>{{ .Site.Params.tagline }}</h2>
-			</hgroup>
-			<img class="logo" src="/images/masa-chibi.png" />
-			<nav>
-				<a href="/">Home</a>
-				{{ range where .Site.Pages "Type" "top" }}
-				<a href="{{ .URL }}">{{ .Title }}</a>
-				{{ end }}
-			</nav>
-		</div>
-		<div class="wrap3col-right hf-border">
-			<div class="screw corner-tr"></div>
-		</div>
-	</div>
-	<!-- TODO: turn circuits-back into component/partial -->
-	<div class="pos-anchor">
-		<div class="circuits-back">
 			<div class="wrap3col">
-				<div class="wrap3col-left hf-border">
-					<div class="screw corner-bl"></div>
+				{{ partial "side-margin.html" (slice "header" "left") }}
+				<div class="wrap3col-mid hf-content">
+					<div class="hf-inner-horz-edge"></div>
+					<!-- Start of content -->
+					<hgroup>
+						<h1>{{ .Site.Title }}</h1>
+						<h2>{{ .Site.Params.tagline }}</h2>
+					</hgroup>
+					<img class="logo" src="/images/masa-chibi.png" />
+					<nav>
+						<a href="/">Home</a>
+						{{ range where .Site.Pages "Type" "top" }}
+						<a href="{{ .URL }}">{{ .Title }}</a>
+						{{ end }}
+					</nav>
+					<!-- end of content -->
 				</div>
-				<div class="wrap3col-mid hf-wrap"></div>
-				<div class="wrap3col-right hf-border">
-					<div class="screw corner-br"></div>
-				</div>
+				{{ partial "side-margin.html" (slice "header" "right") }}
 			</div>
 		</div>
+		{{ partial "side-border.html" (slice "header" "right") }}
+	</div>
+	<div class="hf-outer-horz-edge">
 	</div>
 </header>

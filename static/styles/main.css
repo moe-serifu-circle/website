@@ -18,19 +18,14 @@ body {
 	margin-left: auto;
 }
 
-/* change bg to make layout easier
- TODO: remove when done with layout */
-header, footer {
-	background-color: lightblue;
-}
-
 main {
 	background-color: lightgreen;
 	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
 	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
 }
 
-.screw {
+.screw-tl, .screw-tr, .screw-bl, .screw-br {
+	position: absolute;
 	display: block;
 	padding: 0px;
 	margin-left: auto;
@@ -41,55 +36,42 @@ main {
 	height: 13px;
 }
 
-.corner-tl, .corner-tr, .corner-bl, .corner-br {
-	position: absolute;
-}
-
-.corner-tl, .corner-tr {
+.screw-tl, .screw-tr {
 	top: 4px;
 }
 
-.corner-tl, .corner-bl {
+.screw-tl, .screw-bl {
 	left: 4px;
 }
 
-.corner-tr, .corner-br {
+.screw-tr, .screw-br {
 	right: 4px;
 }
 
-.corner-bl, .corner-br {
-	bottom: 12px;
+.screw-bl, .screw-br {
+	bottom: 4px;
 }
 
-.circuits-back {
-	background-image: url('/images/circuit-small.png');
-	position: absolute;
-	width: 100%;
+footer .screw-bl, footer .screw-br {
+	bottom: 14px;
 }
 
-.pos-anchor {
-	position: relative;
+footer .screw-bl, header .screw-tl {
+	left: 6px;
 }
 
-#site-header {
-	position: relative;
-	z-index: 0;
+header .screw-tl, header .screw-tr {
+	top: 14px;
 }
 
-#site-header .circuits-back {
-	bottom: 3px;
-	z-index: -1;
+footer .screw-br, header .screw-tr {
+	right: 6px;
 }
 
 footer {
 	font-size: 0.6em;
 	font-family: Verdana, sans-serif;
 	text-align: center;
-}
-
-.circuits-back .hf-wrap {
-	height: 40px;
-	background-color: transparent; /* TODO: for layout; remove */
 }
 
 /* These divs has no semantic purpose; they are used for styling only */
@@ -112,11 +94,19 @@ div.content-border {
 div.hf-content {
 	margin-right: 20px;
 	margin-left: 20px;
+}
+
+header div.hf-content {
+	padding-bottom: 1px;
+}
+
+footer div.hf-content {
 	padding-top: 1px;
 }
 
 div.hf-wrap {
 	margin: 0 8px;
+	background-color: lightblue;
 }
 
 div.hf-outer-horz-edge {
@@ -129,6 +119,11 @@ div.hf-outer-horz-edge {
 footer .hf-wrap {
 	border-bottom-left-radius: 26px 24px;
 	border-bottom-right-radius: 26px 24px;
+}
+
+header .hf-wrap {
+	border-top-left-radius: 26px 24px;
+	border-top-right-radius: 26px 24px;
 }
 
 div.hf-inner-horz-edge {
