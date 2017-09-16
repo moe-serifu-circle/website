@@ -1,5 +1,5 @@
 /* define default styling for html5 */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+article, aside, details, figcaption, figure, footer, header, menu, nav,
 section, main {
 	display:block;
 }
@@ -9,6 +9,9 @@ html {
 	background-image: url('../images/circuit-bg.png');
 	background-size: 140px 140px;
 	background-position: 20px 10px;
+	background-attachment: fixed;
+	image-rendering: -webkit-optimize-contrast;
+	height: 100%;
 }
 
 body {
@@ -16,6 +19,7 @@ body {
 	max-width: 916px;
 	margin-right: auto;
 	margin-left: auto;
+	height: 100%;
 }
 
 main {
@@ -68,10 +72,33 @@ footer .screw-br, header .screw-tr {
 	right: 6px;
 }
 
+footer .screw-tr, header .screw-br {
+	right: 6px;
+}
+
+footer .screw-tl, header .screw-bl {
+	left: 6px;
+}
+
+footer .screw-tl, footer .screw-tr {
+	top: 2px;
+}
+
+header .screw-bl, header .screw-br {
+	bottom: 2px;
+}
+
+header {
+	position: relative;
+	top: 10px;
+}
+
 footer {
 	font-size: 0.6em;
 	font-family: Verdana, sans-serif;
 	text-align: center;
+	position: relative;
+	top: -10px;
 }
 
 /* These divs has no semantic purpose; they are used for styling only */
@@ -80,20 +107,34 @@ div.content-wrap {
 	margin-left: 5px;
 }
 
-div.content-border-wrap {
-	max-width: 900px;
+div.content-sizing-wrap {
+	max-width: 916px;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative; /* so z-index does something */
+	z-index: -1; /* so header appears above */
 }
 
-div.content-border {
-	background-color: #aaaaaa;
+div.content-border-wrap {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+div.content-border-left, div.content-border-right {
 	width: 5px;
 }
 
+div.content-border-left {
+	background-image: url('/images/content-edge-left.png');
+}
+
+div.content-border-right {
+	background-image: url('/images/content-edge-right.png');
+}
+
 div.hf-content {
-	margin-right: 20px;
-	margin-left: 20px;
+	margin-right: 24px;
+	margin-left: 24px;
 }
 
 header div.hf-content {
@@ -106,14 +147,50 @@ footer div.hf-content {
 
 div.hf-wrap {
 	margin: 0 8px;
-	background-color: lightblue;
+	background: #b9e3f7; /* very old browser fallback */
+}
+
+header div.hf-wrap {
+	background: -moz-linear-gradient(top, #1f4961 0%, #1f516d 1%, #1f5b7f 2%, #1f6d9d 4%, #1f72a5 5%, #1f91d2 11%, #209cdf 13%, #239fe1 14%, #2aa3e4 20%, #3baeec 29%, #68c4f7 47%, #8ed3f7 60%, #b9e3f7 71%, #d0eaf7 78%, #e0ebf7 85%, #e6ebf7 93%, #e5e8f3 94%, #dee0ec 95%, #cbd1dc 97%, #abb7c4 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #1f4961 0%,#1f516d 1%,#1f5b7f 2%,#1f6d9d 4%,#1f72a5 5%,#1f91d2 11%,#209cdf 13%,#239fe1 14%,#2aa3e4 20%,#3baeec 29%,#68c4f7 47%,#8ed3f7 60%,#b9e3f7 71%,#d0eaf7 78%,#e0ebf7 85%,#e6ebf7 93%,#e5e8f3 94%,#dee0ec 95%,#cbd1dc 97%,#abb7c4 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(top, #1f4961 0%,#1f516d 1%,#1f5b7f 2%,#1f6d9d 4%,#1f72a5 5%,#1f91d2 11%,#209cdf 13%,#239fe1 14%,#2aa3e4 20%,#3baeec 29%,#68c4f7 47%,#8ed3f7 60%,#b9e3f7 71%,#d0eaf7 78%,#e0ebf7 85%,#e6ebf7 93%,#e5e8f3 94%,#dee0ec 95%,#cbd1dc 97%,#abb7c4 100%); /* Opera 11.10-11.50 */
+	background: linear-gradient(to bottom, #1f4961 0%,#1f516d 1%,#1f5b7f 2%,#1f6d9d 4%,#1f72a5 5%,#1f91d2 11%,#209cdf 13%,#239fe1 14%,#2aa3e4 20%,#3baeec 29%,#68c4f7 47%,#8ed3f7 60%,#b9e3f7 71%,#d0eaf7 78%,#e0ebf7 85%,#e6ebf7 93%,#e5e8f3 94%,#dee0ec 95%,#cbd1dc 97%,#abb7c4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a0e2', endColorstr='#e3ebf7',GradientType=0 ); /* IE6-9 */
+}
+
+footer div.hf-wrap {
+	background: -moz-linear-gradient(top, #a7b2c0 0%, #bdc4cf 2%, #d3d6e0 4%, #e4e7f2 6%, #e6ebf7 7%, #dfebf7 17%, #d1eaf7 23%, #c0e5f7 29%, #8dd2f7 43%, #68c3f7 56%, #55bbf3 63%, #32a9e9 78%, #229fe0 88%, #1f93d5 90%, #1f88c5 91%, #1f5c80 97%, #1f4f6b 99%, #1f4961 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #a7b2c0 0%,#bdc4cf 2%,#d3d6e0 4%,#e4e7f2 6%,#e6ebf7 7%,#dfebf7 17%,#d1eaf7 23%,#c0e5f7 29%,#8dd2f7 43%,#68c3f7 56%,#55bbf3 63%,#32a9e9 78%,#229fe0 88%,#1f93d5 90%,#1f88c5 91%,#1f5c80 97%,#1f4f6b 99%,#1f4961 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(top, #a7b2c0 0%,#bdc4cf 2%,#d3d6e0 4%,#e4e7f2 6%,#e6ebf7 7%,#dfebf7 17%,#d1eaf7 23%,#c0e5f7 29%,#8dd2f7 43%,#68c3f7 56%,#55bbf3 63%,#32a9e9 78%,#229fe0 88%,#1f93d5 90%,#1f88c5 91%,#1f5c80 97%,#1f4f6b 99%,#1f4961 100%); /* Opera 11.10-11.50 */
+	background: linear-gradient(to bottom, #a7b2c0 0%,#bdc4cf 2%,#d3d6e0 4%,#e4e7f2 6%,#e6ebf7 7%,#dfebf7 17%,#d1eaf7 23%,#c0e5f7 29%,#8dd2f7 43%,#68c3f7 56%,#55bbf3 63%,#32a9e9 78%,#229fe0 88%,#1f93d5 90%,#1f88c5 91%,#1f5c80 97%,#1f4f6b 99%,#1f4961 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3ebf7', endColorstr='#25a0e2',GradientType=0 ); /* IE6-9 */
 }
 
 div.hf-outer-horz-edge {
-	background-color: red;
-	margin-right: 28px;
-	margin-left: 28px;
+	margin-right: 31px;
+	margin-left: 31px;
 	height: 8px;
+	background: #b9e3f7; /* very old browser fallback */
+	border-color: #444444;
+	border-width: 1px;
+}
+
+header div.hf-outer-horz-edge {
+	background: -moz-linear-gradient(top, #a9b6c3 0%, #91a3b3 42%, #7d95a5 52%, #56788d 68%, #3d657c 81%, #2d5972 90%, #22516b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #a9b6c3 0%,#91a3b3 42%,#7d95a5 52%,#56788d 68%,#3d657c 81%,#2d5972 90%,#22516b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(top, #a9b6c3 0%,#91a3b3 42%,#7d95a5 52%,#56788d 68%,#3d657c 81%,#2d5972 90%,#22516b 100%); /* Opera 11.10-11.50 */
+	background: linear-gradient(to bottom, #a9b6c3 0%,#91a3b3 42%,#7d95a5 52%,#56788d 68%,#3d657c 81%,#2d5972 90%,#22516b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3ebf7', endColorstr='#22516b',GradientType=0 ); /* IE6-9 */
+	border-style: none solid solid;
+}
+
+footer div.hf-outer-horz-edge {
+	background: -moz-linear-gradient(top, #214d66 0%, #26516a 6%, #41667c 26%, #527287 35%, #8ea0af 65%, #a5b1be 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #214d66 0%,#26516a 6%,#41667c 26%,#527287 35%,#8ea0af 65%,#a5b1be 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(top, #214d66 0%,#26516a 6%,#41667c 26%,#527287 35%,#8ea0af 65%,#a5b1be 100%); /* Opera 11.10-11.50 */
+	background: linear-gradient(to bottom, #214d66 0%,#26516a 6%,#41667c 26%,#527287 35%,#8ea0af 65%,#a5b1be 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22516b', endColorstr='#e3ebf7',GradientType=0 ); /* IE6-9 */
+	border-style: solid solid none;
 }
 
 footer .hf-wrap {

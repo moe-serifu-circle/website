@@ -10,7 +10,7 @@ div.hf-margin img, div.hf-border img {
 }
 
 div.hf-margin {
-	width: 20px;
+	width: 24px;
 }
 
 div.hf-inner {
@@ -24,12 +24,10 @@ div.hf-inner div {
 }
 
 div.hf-inner .hf-border-filler {
-	background-color: green;
-	height: 28px;
+	height: 36px;
 }
 
 div.hf-inner .hf-border-sweep-outer {
-	background-color: red;
 	height: 6px;
 }
 
@@ -51,9 +49,9 @@ div.hf-inner .hf-border-curve {
 	right: 0px;
 }
 
+
 div.hf-inner .hf-margin-sweep-inner {
-	background-color: red;
-	height: 34px;
+	height: 44px;
 }
 
 div.hf-inner .hf-margin-side {
@@ -63,3 +61,14 @@ div.hf-inner .hf-margin-side {
 div.hf-inner .hf-margin-curve {
 	height: 20px;
 }
+
+/* Horrible hack to fix subpixel calculation causing a gap for the
+100% height table (only appears in webkit browsers) */
+header div.hf-margin div.hf-inner {
+	position: relative;
+	top: 1px;
+}
+div.hf-inner .hf-border-filler {
+	height: 35px;
+}
+/* END OF HORRIBLE HACK */

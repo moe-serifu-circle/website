@@ -1,4 +1,4 @@
-<header id="site-header">
+<header>
 	<div class="wrap3col">
 		{{ partial "side-border.html" (slice "header" "left") }}
 		<div class="wrap3col-mid hf-wrap">
@@ -7,10 +7,10 @@
 				<div class="wrap3col-mid hf-content">
 					<div class="hf-inner-horz-edge"></div>
 					<!-- Start of content -->
-					<hgroup>
+					<div>
 						<h1>{{ .Site.Title }}</h1>
 						<h2>{{ .Site.Params.tagline }}</h2>
-					</hgroup>
+					</div>
 					<img class="logo" src="/images/masa-chibi.png" />
 					<nav>
 						<a href="/">Home</a>
