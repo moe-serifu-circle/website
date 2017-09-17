@@ -10,7 +10,7 @@ header or footer. Pass in an array, where first element is 'header' or 'footer',
 {{ $s1 := substr $side 0 1 }}
 
 <div class="wrap3col-{{ $side }} hf-margin">
-	<!--<div class="screw-t{{ $s1 }}"></div>-->
+	<div class="screw-t{{ $s1 }}"></div>
 	<div class="hf-inner">
 {{ if eq $hf "footer" }}
 		<div class="hf-margin-sweep-inner"><img src="/images/sweep-inner-b{{ $s1 }}.png" /></div>
@@ -23,5 +23,5 @@ header or footer. Pass in an array, where first element is 'header' or 'footer',
 		<div class="hf-margin-sweep-inner"><img src="/images/sweep-inner-t{{ $s1 }}.png" /></div>
 {{ end }}
 	</div>
-	<!--<div class="screw-b{{ $s1 }}"></div>-->
+	<div class="screw-b{{ $s1 }}"></div>
 </div>
