@@ -10,31 +10,33 @@
 		{{ partial "iecompat.html" . }}
 	</head>
 	<body>
-		{{ block "header" . }}
-			{{ partial "header/site-header.html" . }}
-		{{ end }}
-		
-		<div class="content-sizing-wrap">
-			<div class="wrap3col content-border-wrap">
-				<div class="wrap3col-left content-border-left"></div>
-				<div class="wrap3col-mid content-wrap">
-					{{ block "main" . }}
-					<main>
-						<article class="default-content">
-							<h1>Default Content</h1>
-							<p>If you are seeing this, then the page you have accessed exists but does not correctly
-							define a 'main' block. Please check this page's content for errors and then re-generate
-							the page.</p>
-						</article>
-					</main>
-					{{ end }}
+		<div class="body-wrap">
+			{{ block "header" . }}
+				{{ partial "header/site-header.html" . }}
+			{{ end }}
+			
+			<div class="content-sizing-wrap">
+				<div class="wrap3col content-border-wrap">
+					<div class="wrap3col-left content-border-left"></div>
+					<div class="wrap3col-mid content-wrap">
+						{{ block "main" . }}
+						<main>
+							<article class="default-content">
+								<h1>Default Content</h1>
+								<p>If you are seeing this, then the page you have accessed exists but does not correctly
+								define a 'main' block. Please check this page's content for errors and then re-generate
+								the page.</p>
+							</article>
+						</main>
+						{{ end }}
+					</div>
+					<div class="wrap3col-right content-border-right"></div>
 				</div>
-				<div class="wrap3col-right content-border-right"></div>
 			</div>
+			
+			{{ block "footer" . }}
+				{{ partial "footer/site-footer.html" . }}
+			{{ end }}
 		</div>
-		
-		{{ block "footer" . }}
-			{{ partial "footer/site-footer.html" . }}
-		{{ end }}
 	</body>
 </html>

@@ -14,11 +14,16 @@ html {
 }
 
 body {
-	/* max-width of body is 900px + main header's border (both sides) */
-	max-width: 916px;
+	/* max-width of body is 960px + main header's border (both sides) + offset of  */
+	max-width: 1014px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 0;
+}
+
+.body-wrap {
+	margin-left: 19px;
+	margin-right: 19px;
 }
 
 main {
@@ -107,7 +112,7 @@ div.content-wrap {
 }
 
 div.content-sizing-wrap {
-	max-width: 916px;
+	max-width: 976px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative; /* so z-index does something */
@@ -205,4 +210,70 @@ header .hf-wrap {
 div.hf-inner-horz-edge {
 	background-image: url('/images/horz-edge.png');
 	height: 8px;
+}
+
+/* panel styles */
+
+.panels-container {
+	position: relative;
+	margin-left: -32px;
+	margin-right: -32px;
+	text-align: center;
+	z-index: 1;
+}
+
+article.panel {
+	border-radius: 16px 16px;
+	border: 1px solid #000000;
+	display: inline-block;
+	width: 320px;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-bottom: 10px;
+	background-color: #234668; /* very old browser fallback */
+	box-shadow: -12px 12px 12px -6px #444444;
+	-webkit-box-shadow: -12px 12px 12px -6px #444444;
+	-moz-box-shadow: -12px 12px 12px -6px #444444;
+}
+
+article.panel h1 {
+	color: #d2f9ff;
+	margin: 0px;
+	padding: 10px;
+	border-top-left-radius: 16px 16px;
+	border-top-right-radius: 16px 16px;
+	border-bottom: 1px solid #000000;
+	font-size: 17pt;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	background: -moz-linear-gradient(top, #62a2c4 0%, #234668 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #62a2c4 0%,#234668 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(top, #62a2c4 0%,#234668 100%); /* Opera 11.10-11.50 */
+	background: linear-gradient(to bottom, #62a2c4 0%,#234668 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62a2c4', endColorstr='#234668',GradientType=0 ); /* IE6-9 */
+}
+
+article.panel img {
+	border-style: none solid solid;
+	border-width: 1px;
+	border-color: #000000;
+}
+
+article .panel-back-0, article .panel-back-1, article .panel-back-2  {
+	height: 320px;
+	background-color: #336b91;
+	border-bottom-left-radius: 16px 16px;
+	border-bottom-right-radius: 16px 16px;
+}
+
+article .panel-back-0 {
+	background-image: url('/images/panel-trim-1.png');
+}
+
+article .panel-back-1 {
+	background-image: url('/images/panel-trim-2.png');
+}
+
+article .panel-back-2 {
+	background-image: url('/images/panel-trim-3.png');
 }

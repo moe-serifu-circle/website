@@ -8,14 +8,15 @@
 		{{ end }}
 		<a href="{{ .Site.RSSLink }}"><img src="/images/icons/rss.png" class="icon">RSS Feed</a>
 	</nav>
-	{{ range $index, $panel := $.Site.Data.panels }}
-	<article class="panel">
-		<h1>{{ $panel.title }}</h1>
-		<div class="panel-back-{{ $index }}">
-			<img src="{{ $panel.image }}" />
-		</div>
-	</article>
-	{{ end }}
+	<div class="panels-container">
+		{{- range $index, $panel := $.Site.Data.panels -}}
+		<article class="panel">
+			<h1>{{ $panel.title }}</h1>
+			<div class="panel-back-{{ $index }}">
+				<img src="/images/{{ $panel.image }}" />
+			</div>
+		</article>{{ end }}
+	</div>
 	<article class="preview-panel news">
 		{{ range .Site.Pages }}
 			<p>{{ .Section }} - {{ .Title }}</p>
