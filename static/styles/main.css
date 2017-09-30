@@ -15,15 +15,15 @@ html {
 
 body {
 	/* max-width of body is 960px + main header's border (both sides) + offset of  */
-	max-width: 1014px;
+	max-width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 0;
 }
 
 .body-wrap {
-	margin-left: 19px;
-	margin-right: 19px;
+	margin-left: 42px;
+	margin-right: 42px;
 }
 
 main {
@@ -216,8 +216,8 @@ div.hf-inner-horz-edge {
 
 .panels-container {
 	position: relative;
-	margin-left: -32px;
-	margin-right: -32px;
+	margin-left: -50px;
+	margin-right: -50px;
 	text-align: center;
 	z-index: 1;
 }
@@ -226,14 +226,14 @@ article.panel {
 	border-radius: 16px 16px;
 	border: 1px solid #000000;
 	display: inline-block;
-	width: 320px;
-	margin-left: 8px;
-	margin-right: 8px;
+	width: 300px;
+	margin-left: 14px;
+	margin-right: 14px;
 	margin-bottom: 10px;
 	background-color: #234668; /* very old browser fallback */
-	box-shadow: -12px 12px 12px -6px #444444;
-	-webkit-box-shadow: -12px 12px 12px -6px #444444;
-	-moz-box-shadow: -12px 12px 12px -6px #444444;
+	-webkit-box-shadow: -16px 16px 16px -8px #444444;
+	-moz-box-shadow: -16px 16px 16px -8px #444444;
+	box-shadow: -16px 16px 16px -8px #444444;
 }
 
 article.panel h1 {
@@ -260,7 +260,7 @@ article.panel img {
 }
 
 article .panel-back-0, article .panel-back-1, article .panel-back-2  {
-	height: 320px;
+	height: 285px;
 	background-color: #336b91;
 	border-bottom-left-radius: 16px 16px;
 	border-bottom-right-radius: 16px 16px;
