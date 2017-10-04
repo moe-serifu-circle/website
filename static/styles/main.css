@@ -277,3 +277,17 @@ article .panel-back-1 {
 article .panel-back-2 {
 	background-image: url('/images/panel-trim-3.png');
 }
+
+#social-links {
+	background-image: url('/images/todo.png');
+	width: 268px;
+	height: 200px;
+	display: block;
+	font-family: "Courier New", monospace;
+}
+
+#social-links h1 {
+	padding-left: 4px;
+	padding-right: 4px;
+	
+}
