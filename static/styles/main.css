@@ -27,7 +27,6 @@ body {
 }
 
 main {
-	background-color: lightgreen;
 	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
 	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
 }
