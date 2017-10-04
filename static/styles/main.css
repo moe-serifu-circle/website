@@ -212,6 +212,10 @@ div.hf-inner-horz-edge {
 	height: 8px;
 }
 
+.pos-anchor {
+	position: relative;
+}
+
 /* panel styles */
 
 .panels-container {
@@ -284,10 +288,36 @@ article .panel-back-2 {
 	height: 200px;
 	display: block;
 	font-family: "Courier New", monospace;
+	position: absolute;
+	right: -10px;
+	top: -70px;
+	overflow: show;
+}
+
+#social-links .tape {
+	width: 110px;
+	height: 110px;
+	background-image: url('/images/tape.png');
+	position: absolute;
+	top: -35px;
+	left: -25px;
 }
 
 #social-links h1 {
-	padding-left: 4px;
-	padding-right: 4px;
-	
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-top: 9px;
+	margin-bottom: 5px;
+	font-size: 16pt;
+}
+
+#social-links a {
+	display: block;
+	margin-left: 35px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#social-links img {
+	vertical-align: middle;
 }

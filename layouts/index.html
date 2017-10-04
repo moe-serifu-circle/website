@@ -1,13 +1,6 @@
 {{ define "main" }}
 <main>
 	<h1>{{ .Title }}</h1>
-	<nav id="social-links">
-		<h1>// TODO: Follow</h1>
-		{{ range $.Site.Data.links }}
-		<a href="{{ .url }}"><img src="/images/icons/{{ .icon }}" class="icon">{{ .title }}</a>
-		{{ end }}
-		<a href="{{ .Site.RSSLink }}"><img src="/images/icons/rss.png" class="icon">RSS Feed</a>
-	</nav>
 	<div class="panels-container">
 		{{- range $index, $panel := $.Site.Data.panels -}}
 		<article class="panel">
@@ -36,4 +29,9 @@
 		<div class="arm-panel"></div>
 	</article>
 </main>
+{{ end }}
+{{ define "header" }}
+	{{ partial "header/site-header.html" . }}
+	<!-- include social links after footer so it appears above all elements -->
+	{{ partial "social-links.html" . }}
 {{ end }}
