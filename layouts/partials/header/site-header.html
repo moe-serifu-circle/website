@@ -7,11 +7,11 @@
 				<div class="wrap3col-mid hf-content">
 					<div class="hf-inner-horz-edge"></div>
 					<!-- Start of content -->
-					<div>
-						<h1>{{ .Site.Title }}</h1>
+					<div class="text-inline">
+						<h1>{{ .Site.Params.project }}</h1><br />
 						<h2>{{ .Site.Params.tagline }}</h2>
 					</div>
-					<img class="logo" src="/images/masa-chibi.png" />
+					<img class="logo" src="/images/chibi.png" />
 					<nav>
 						<a href="/">Home</a>
 						{{ range where .Site.Pages "Type" "top" }}

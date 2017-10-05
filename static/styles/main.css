@@ -92,6 +92,16 @@ header .screw-bl, header .screw-br {
 	bottom: 2px;
 }
 
+.text-inline, .text-inline * {
+	display: inline-block;
+}
+
+.logo {
+	float: right;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+
 header {
 	position: relative;
 	top: 10px;
@@ -101,6 +111,21 @@ header {
 header h1 {
 	text-transform: uppercase;
 	font-family: Arial, Verdana, sans-serif;
+	font-size: 45pt;
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+
+header h2 {
+	margin-top: 0px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	font-style: italic;
+	font-weight: normal;
+}
+
+header nav {
+	clear: right;
 }
 
 footer {
