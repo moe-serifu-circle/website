@@ -95,6 +95,12 @@ header .screw-bl, header .screw-br {
 header {
 	position: relative;
 	top: 10px;
+	z-index: 1;
+}
+
+header h1 {
+	text-transform: uppercase;
+	font-family: Arial, Verdana, sans-serif;
 }
 
 footer {
@@ -115,8 +121,6 @@ div.content-sizing-wrap {
 	max-width: 976px;
 	margin-left: auto;
 	margin-right: auto;
-	position: relative; /* so z-index does something */
-	z-index: -1; /* so header appears above */
 }
 
 div.content-border-wrap {
@@ -293,6 +297,7 @@ article .panel-back-2 {
 	top: -50px;
 	overflow: show;
 	font-size: 11pt;
+	z-index: 2;
 }
 
 #social-links .tape {
