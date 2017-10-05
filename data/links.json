@@ -1,13 +1,13 @@
 [
 	{
 		"title": "GitHub",
-		"icon": "github.png",
+		"icon": "gh.png",
 		"url": "https://www.github.com/moe-serifu-circle/moe-serifu-agent"
 	},
 	{
 		"title": "Facebook",
 		"url": "https://www.facebook.com/MoeSerifu",
-		"icon": "facebook.png"
+		"icon": "fb.png"
 	},
 	{
 		"title": "Twitter",

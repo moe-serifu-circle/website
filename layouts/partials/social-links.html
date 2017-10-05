@@ -3,8 +3,8 @@
 		<div class="tape"></div>
 		<h1>//TODO: follow</h1>
 		{{ range $.Site.Data.links }}
-		<a href="{{ .url }}"><img src="/images/icons/{{ .icon }}" class="icon">{{ .title }}</a>
+		<a href="{{ .url }}"><img src="/images/icons/{{ .icon }}" class="icon" />{{ .title }}</a>
 		{{ end }}
-		<a href="{{ .Site.RSSLink }}"><img src="/images/icons/rss.png" class="icon">RSS Feed</a>
+		<a href="{{ .Site.RSSLink }}"><img src="/images/icons/rss.png" class="icon" />RSS Feed</a>
 	</nav>
 </div>

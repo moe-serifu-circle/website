@@ -29,6 +29,7 @@ body {
 main {
 	padding-top: 1px; /* Must be at least 1px so child margins do not collapse out */
 	padding-bottom: 1px; /* Must be at least 1px so child margins do not collapse out */
+	background-color: #ffffff;
 }
 
 .screw-tl, .screw-tr, .screw-bl, .screw-br {
@@ -283,23 +284,25 @@ article .panel-back-2 {
 
 #social-links {
 	background-image: url('/images/todo.png');
-	width: 268px;
-	height: 200px;
+	width: 241px;
+	height: 145px;
 	display: block;
 	font-family: "Courier New", monospace;
 	position: absolute;
 	right: -10px;
-	top: -70px;
+	top: -50px;
 	overflow: show;
+	font-size: 11pt;
 }
 
 #social-links .tape {
-	width: 110px;
-	height: 110px;
+	width: 80px;
+	height: 80px;
 	background-image: url('/images/tape.png');
 	position: absolute;
-	top: -35px;
-	left: -25px;
+	top: -30px;
+	left: -30px;
+	z-index: 0;
 }
 
 #social-links h1 {
@@ -311,12 +314,26 @@ article .panel-back-2 {
 }
 
 #social-links a {
+	position: relative;
+	z-index: 1;
 	display: block;
 	margin-left: 35px;
 	margin-top: 2px;
 	margin-bottom: 2px;
+	margin-right: 40px;
+	text-decoration: none;
+	color: #343434;
+}
+
+#social-links a:hover {
+	color: #848484;
+	text-decoration: underline;
 }
 
 #social-links img {
+	display: inline-block;
+	margin-right: 8px;
 	vertical-align: middle;
+	width: 20px;
+	height: 20px;
 }
