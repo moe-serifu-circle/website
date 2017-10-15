@@ -180,6 +180,7 @@ div.content-border-left {
 
 div.content-border-right {
 	background-image: url('/images/content-edge-right.png');
+	z-index: -1; /* needed for tweets panel arm */
 }
 
 div.hf-content {
@@ -391,6 +392,9 @@ article .panel-back-2 {
 .preview-panel {
 	border: 4px #2a4968 solid;
 	border-radius: 8px 8px;
+	z-index: 1;
+	position: relative;
+	background-color: #ffffff;
 }
 
 .preview-panel h1 {
@@ -443,4 +447,48 @@ article .panel-back-2 {
 	margin-left: 4px;
 	font-weight: bold;
 	text-decoration: underline;
+}
+
+.preview-panel-container {
+	position: relative;
+}
+
+.preview-panel-container .anchor {
+	width: 54px;
+	height: 242px;
+	display: block;
+	position: absolute;
+	z-index: 0;
+}
+
+.preview-panel-container.left .anchor {
+	background-image: url('/images/anchor-l.png');
+	left: -32px;
+	top: 60px;
+}
+
+.preview-panel-container.right .anchor {
+	background-image: url('/images/anchor-r.png');
+	right: -32px;
+	top: 40px;
+}
+
+.preview-panel-container .arm {
+	width: 30px;
+	height: 166px;
+	display: block;
+	position: absolute;
+	z-index: -1;
+}
+
+.preview-panel-container.left .arm {
+	background-image: url('/images/arm-l.png');
+	left: -40px;
+	top: 55px;
+}
+
+.preview-panel-container.right .arm {
+	background-image: url('/images/arm-r.png');
+	right: -40px;
+	top: 35px;
 }
