@@ -406,7 +406,7 @@ article .panel-back-2 {
 	float: left;
 }
 
-.preview-panel .title {
+.preview-panel .title, body > div > div.timeline-Header.timeline-InformationCircle-widgetParent {
 	border-top-left-radius: 4px 4px;
 	border-top-right-radius: 4px 4px;
 	background: #62a2c4; /* Old browsers */
@@ -417,13 +417,14 @@ article .panel-back-2 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62a2c4', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
-.preview-panel.news {
-	width: 58%;
+.preview-panel-container.news {
+	width: 60%;
 	float: left;
 }
 
-.preview-panel.tweets {
+.preview-panel-container.tweets {
 	width: 38%;
+	min-width: 190px;
 	float: right;
 }
 
@@ -451,6 +452,7 @@ article .panel-back-2 {
 
 .preview-panel-container {
 	position: relative;
+	margin-bottom: 5px;
 }
 
 .preview-panel-container .anchor {
@@ -459,6 +461,14 @@ article .panel-back-2 {
 	display: block;
 	position: absolute;
 	z-index: 0;
+}
+
+.preview-panel-container.left .preview-panel {
+	min-height: 300px;
+}
+
+.preview-panel-container.right .preview-panel {
+	min-height: 280px;
 }
 
 .preview-panel-container.left .anchor {
