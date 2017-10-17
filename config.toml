@@ -7,3 +7,19 @@ hasCJKLanguage = true
 [params]
 	project = "Moe Serifu Agent"
 	tagline = "Cuteness & Curiosity"
+
+[[menu.main]]
+	name = "Home"
+	identifier = "home"
+	url = "/"
+	weight = 1
+[[menu.main]]
+	name = "Blog"
+	identifier = "blog"
+	url = "/posts/"
+	weight = 2
+[[menu.main]]
+	name = "About"
+	identifier = "about"
+	url = "/about/"
+	weight = 3

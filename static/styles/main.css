@@ -21,6 +21,40 @@ body {
 	margin-top: 0;
 }
 
+a {
+	color: #3481bc;
+}
+
+li {
+	list-style-type: square;
+}
+
+.font-sans {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+.font-sans-title {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.preview-panel.top-level .title h1 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.preview-panel.top-level .title time {
+	margin-left: 30px;
+}
+
+hr.title-divider {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.preview-panel hr.title-divider {
+	width: 98%;
+}
+
 .body-wrap {
 	margin-left: 42px;
 	margin-right: 42px;
@@ -33,6 +67,7 @@ main {
 
 main h1 {
 	margin-top: 12px;
+	font-family: Arial, Verdana, sans-serif;
 }
 
 .screw-tl, .screw-tr, .screw-bl, .screw-br {
@@ -447,7 +482,14 @@ article .panel-back-2 {
 	margin-bottom: 0;
 	margin-left: 4px;
 	font-weight: bold;
-	text-decoration: underline;
+}
+
+.preview-panel-content h2 a {
+	color: #000000;
+}
+
+.preview-panel-content h2 a:hover {
+	text-decoration: none;
 }
 
 .preview-panel-container {
@@ -501,4 +543,15 @@ article .panel-back-2 {
 	background-image: url('/images/arm-r.png');
 	right: -40px;
 	top: 35px;
+}
+
+.preview-panel p {
+	margin-bottom: 3px;
+}
+
+.preview-panel-container time {
+	font-style: italic;
+	display: block;
+	margin-top: 5px;
+	margin-left: 15px;
 }

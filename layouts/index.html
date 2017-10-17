@@ -10,9 +10,6 @@
 			</div>
 		</article>{{ end }}
 	</div>
-	<!--{{ range .Site.Pages }}
-		<p>{{ .Section }} - {{ .Title }}</p>
-	{{ end }}-->
 	<div class="preview-panel-container left news">
 		<div class="anchor"></div>
 		<div class="arm"></div>
@@ -23,19 +20,14 @@
 				<div class="float-clear"></div>
 			</div>
 			<hr />
+			{{ $posts := ($.Site.GetPage "section" "posts").Pages.ByPublishDate.Reverse }}
+			{{ range first 1 $posts }}
 			<div class="preview-panel-content">
-				<h2>Latest Post Title</h2>
-				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-				piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
-				McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
-				more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the
-				cites of the word in classical literature, discovered the undoubtable source.</p>
-				<p>Lorem Ipsum
-				comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-				of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
-				ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
-				dolor sit amet..", comes from a line in section 1.10.32.</p>
+				<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+				<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
+				{{ .Content }}
 			</div>
+			{{ end }}
 		</article>
 	</div>
 	<div class="preview-panel-container right tweets">

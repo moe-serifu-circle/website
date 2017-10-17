@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main>
+	<h1>{{ .Title }}</h1>
+	{{- range first 5 .Data.Pages -}}
+	<div class="preview-panel-container left blog">
+		<div class="anchor"></div>
+		<div class="arm"></div>
+		<article class="preview-panel top-level">
+			<div class="title">
+				<h1 class="with-sub"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+				<div class="float-clear"></div>
+				<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
+			</div>
+			<hr class="title-divider" />
+			<div class="preview-panel-content">
+				{{ .Summary }}
+			</div>
+		</article>
+	</div>
+	{{ end }}
+	<div class="float-clear"></div>
+</main>
+{{ end }}

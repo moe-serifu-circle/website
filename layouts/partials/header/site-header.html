@@ -13,9 +13,8 @@
 					</div>
 					<img class="logo" src="/images/chibi.png" />
 					<nav>
-						<a href="/">Home</a>{{- range where .Site.Pages "Type" "top" -}}
-						<a href="{{ .URL }}">{{ .Title }}</a>
-						{{ end }}
+						{{- range .Site.Menus.main -}}
+						<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
 					</nav>
 					<!-- end of content -->
 				</div>
