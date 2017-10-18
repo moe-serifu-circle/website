@@ -1,7 +1,37 @@
 {{ define "main" }}
 <main>
 	<h1>{{ .Title }}</h1>
-	{{- range first 5 .Data.Pages -}}
+	<div class="preview-panel-container right archive">
+		<div class="anchor"></div>
+		<div class="arm"></div>
+		<article class="preview-panel">
+			<div class="title">
+				<h1>Archive</h1>
+				<img src="/images/icons/news.png" />
+				<div class="float-clear"></div>
+			</div>
+			<hr />
+			<div class="preview-panel-content">
+				{{ $curday := -1 }}
+				{{ $curmonth := -1 }}
+				{{ $curyear := -1 }}
+				<ul class="archive-years">
+				{{- range .Data.Pages.ByPublishDate.Reverse -}}
+					{{ if ne .PublishDate.Day $curday }}
+						{{ if ne $curday -1 }}
+					</ul></li> {{/* close the day list */}}
+						{{ end }}
+						{{ $curday := .PublishDate.Day }}
+						<li><h2>{{ $curday }}</h2><ul class="archive-posts">
+					{{ end }}
+					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ end }}
+					</ul></li>{{/* close the day list */}}
+				</ul>
+			</div>
+		</article>
+	</div>
+	{{- range first 5 .Data.Pages.ByPublishDate.Reverse -}}
 	<div class="preview-panel-container left blog">
 		<div class="anchor"></div>
 		<div class="arm"></div>
@@ -15,6 +45,7 @@
 			<div class="preview-panel-content">
 				{{ .Summary }}
 			</div>
+			<hr class="title-divider" />
 		</article>
 	</div>
 	{{ end }}
