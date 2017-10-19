@@ -1,0 +1,35 @@
+<ul class="archive years">
+{{- range .Data.Pages.ByPublishDate.Reverse -}}
+	{{- if ne .PublishDate.Year ($.Scratch.Get "curyear") -}}
+		{{- if ne ($.Scratch.Get "curyear") -1 }}
+			</ul></li>{{/* close the posts list */}}
+		</ul></li>{{/* close the days list */}}
+	</ul></li>{{/* close the months list */}}
+		{{- end -}}
+		{{- $.Scratch.Set "curyear" .PublishDate.Year -}}
+		{{- $.Scratch.Set "curmonth" -1 -}}
+		{{- $.Scratch.Set "curday" -1 }}
+	<li><h2>{{ $.Scratch.Get "curyear" }}</h2><ul class="archive months">
+	{{- end -}}
+	{{- if ne .PublishDate.Month ($.Scratch.Get "curmonth") -}}
+		{{- if ne ($.Scratch.Get "curmonth") -1 }}
+			</ul></li>{{/* close the posts list */}}
+		</ul></li>{{/* close the days list */}}
+		{{- end -}}
+		{{- $.Scratch.Set "curmonth" .PublishDate.Month -}}
+		{{- $.Scratch.Set "curday" -1 }}
+		<li><h3>{{ $.Scratch.Get "curmonth" }}</h3><ul class="archive days">
+	{{- end -}}
+	{{- if ne .PublishDate.Day ($.Scratch.Get "curday") -}}
+		{{- if ne ($.Scratch.Get "curday") -1 }}
+			</ul></li> {{/* close the posts list */}}
+		{{- end -}}
+		{{- $.Scratch.Set "curday" .PublishDate.Day }}
+			<li><h4>{{ $.Scratch.Get "curday" }}</h4><ul class="archive posts">
+	{{- end }}
+				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{- end }}
+			</ul></li>{{/* close the posts list */}}
+		</ul></li>{{/* close the days list */}}
+	</ul></li>{{/* close the months list */}}
+</ul>

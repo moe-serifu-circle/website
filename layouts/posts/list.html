@@ -12,22 +12,10 @@
 			</div>
 			<hr />
 			<div class="preview-panel-content">
-				{{ $curday := -1 }}
-				{{ $curmonth := -1 }}
-				{{ $curyear := -1 }}
-				<ul class="archive-years">
-				{{- range .Data.Pages.ByPublishDate.Reverse -}}
-					{{ if ne .PublishDate.Day $curday }}
-						{{ if ne $curday -1 }}
-					</ul></li> {{/* close the day list */}}
-						{{ end }}
-						{{ $curday := .PublishDate.Day }}
-						<li><h2>{{ $curday }}</h2><ul class="archive-posts">
-					{{ end }}
-					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-				{{ end }}
-					</ul></li>{{/* close the day list */}}
-				</ul>
+				{{- $.Scratch.Set "curday" -1 -}}
+				{{- $.Scratch.Set "curmonth" -1 -}}
+				{{- $.Scratch.Set "curyear" -1 }}
+				{{ partial "blog-archive.html" . }}
 			</div>
 		</article>
 	</div>

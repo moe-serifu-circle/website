@@ -555,3 +555,54 @@ article .panel-back-2 {
 	margin-top: 5px;
 	margin-left: 15px;
 }
+
+/* Blog archive styles */
+ul.archive {
+	padding-left: 0;
+	margin-left: 10px;
+}
+
+ul.archive h2, ul.archive h3, ul.archive h4 {
+	margin: 0;
+}
+
+ul.archive li {
+	list-style-type: none;
+	margin-top: 0;
+}
+
+ul.archive.years {
+	padding: 0;
+	margin: 0;
+}
+
+ul.archive.years li {
+	border: 1px solid #2a4968;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 4px 4px 4px 6px;
+	background-color: #ebf1f5;
+}
+
+ul.archive.months li {
+	border-radius: 3px;
+	margin: 8px 0 0;
+	background-color: #bcd3e0;
+}
+
+ul.archive.days li {
+	padding: 6px 8px 8px;
+	background-color: #83adc7;
+}
+
+ul.archive.posts {
+	font-size: 10pt;
+	margin-left: 35px;
+}
+
+ul.archive.posts li {
+	border: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: square;
+}
