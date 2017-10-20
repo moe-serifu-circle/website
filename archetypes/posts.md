@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | strings.TrimLeft " 0123456789" | title }}"
+title: "{{ replace .TranslationBaseName "-" " " | replaceRE "^\\d{4} \\d{2} \\d{2} " "" | title }}"
 date: {{ .Date }}
 draft: true
 authors: ["Rebecca C. Nelson"]
