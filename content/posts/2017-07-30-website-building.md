@@ -1,7 +1,7 @@
 ---
 title: "Website Building"
 date: 2017-07-30T10:52:59-05:00
-authors: ["Rebecca C. Nelson"]
+authors: ["Rebecca C Nelson"]
 tags: ["test", "filler"]
 categories: ["news"]
 ---
