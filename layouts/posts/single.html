@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main>
+	<h1>Blog Post</h1>
+	<div class="preview-panel-container left blog-post">
+		<div class="anchor"></div>
+		<div class="arm"></div>
+		<article class="preview-panel">
+			<div class="title">
+				<h1 class="with-sub">{{ .Title }}</a></h1>
+				<div class="float-clear"></div>
+				<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
+			</div>
+			<hr />
+			<div class="preview-panel-content">
+				{{ .Content }}
+			</div>
+		</article>
+	</div>
+	<div class="float-clear"></div>
+</main>
+{{ end }}

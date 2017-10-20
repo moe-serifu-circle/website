@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main>
+	<h1>Details</h1>
+	<div class="preview-panel-container left">
+		<article class="preview-panel">
+			<div class="title">
+				<h1>{{ .Title }}</a></h1>
+				<div class="float-clear"></div>
+			</div>
+			<hr />
+			<div class="preview-panel-content">
+				{{ .Content }}
+			</div>
+		</article>
+	</div>
+	<div class="float-clear"></div>
+</main>
+{{ end }}

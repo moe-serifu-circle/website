@@ -1,4 +1,7 @@
 <ul class="archive years">
+{{- $.Scratch.Set "curday" -1 -}}
+{{- $.Scratch.Set "curmonth" -1 -}}
+{{- $.Scratch.Set "curyear" -1 }}
 {{- range .Data.Pages.ByPublishDate.Reverse -}}
 	{{- if ne .PublishDate.Year ($.Scratch.Get "curyear") -}}
 		{{- if ne ($.Scratch.Get "curyear") -1 }}
