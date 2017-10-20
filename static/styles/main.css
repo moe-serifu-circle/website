@@ -51,6 +51,11 @@ hr.title-divider {
 	margin-bottom: 20px;
 }
 
+hr.title-divider-small {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .preview-panel hr.title-divider {
 	width: 98%;
 }
@@ -651,4 +656,26 @@ ul.archive.posts li {
 
 ul.archive .archive-accordion h3, ul.archive .archive-accordion h2 {
 	cursor: pointer;
+}
+
+h1.post-main {
+	margin-bottom: 3px;
+}
+
+.post-meta {
+	font-size: 10pt;
+	font-style: italic;
+	margin-left: 20px;
+}
+
+.post-meta p {
+	margin: 0;
+}
+
+.post-meta a {
+	color: #1f5a87;
+}
+
+.taxonomy-link {
+	margin-left: 5px;
 }
