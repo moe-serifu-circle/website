@@ -588,6 +588,7 @@ ul.archive h2 {
 }
 
 ul.archive h3 {
+	font-weight: normal;
 	font-size: 13pt;
 	padding: 1px 3px;
 	border-radius: 3px;
@@ -597,7 +598,6 @@ ul.archive h3 {
 	background: -o-linear-gradient(top, #d2e5ef 0%,#a2c5d8 100%); /* Opera 11.10-11.50 */
 	background: linear-gradient(to bottom, #d2e5ef 0%,#a2c5d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2e5ef', endColorstr='#a2c5d8',GradientType=0 ); /* IE6-9 */
-	font-weight: normal;
 }
 
 ul.archive h4 {
@@ -621,6 +621,7 @@ ul.archive.years li {
 
 ul.archive.months li {
 	border-radius: 3px;
+	border-color: #6d94ba;
 	margin: 8px 0 0;
 	padding-bottom: 4px;
 	background-color: #bcd3e0;
