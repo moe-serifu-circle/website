@@ -1,6 +1,9 @@
 ---
 title: "Site Creation"
 date: 2017-10-16T06:51:57-05:00
+authors: ["Rebecca C. Nelson"]
+tags: ["retina", "design"]
+categories: ["news"]
 ---
 
 At this point, the first unit of work on the main website is complete. The
