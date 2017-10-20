@@ -571,6 +571,41 @@ ul.archive li {
 	margin-top: 0;
 }
 
+ul.archive h2, ul.archive h3, ul.archive h4 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+ul.archive h2 {
+	font-size: 16pt;
+	padding: 1px 3px;
+	border-radius: 3px;
+	background: #c9e0ef; /* Old browsers */
+	background: -moz-linear-gradient(top, #f4faff 0%, #b6d5ea 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #f4faff 0%,#b6d5ea 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(top, #f4faff 0%,#b6d5ea 100%); /* Opera 11.10-11.50 */
+	background: linear-gradient(to bottom, #f4faff 0%,#b6d5ea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4faff', endColorstr='#b6d5ea',GradientType=0 ); /* IE6-9 */
+}
+
+ul.archive h3 {
+	font-size: 13pt;
+	padding: 1px 3px;
+	border-radius: 3px;
+	background: #a2c5d8; /* Old browsers */
+	background: -moz-linear-gradient(top, #d2e5ef 0%, #a2c5d8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #d2e5ef 0%,#a2c5d8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(top, #d2e5ef 0%,#a2c5d8 100%); /* Opera 11.10-11.50 */
+	background: linear-gradient(to bottom, #d2e5ef 0%,#a2c5d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2e5ef', endColorstr='#a2c5d8',GradientType=0 ); /* IE6-9 */
+	font-weight: normal;
+}
+
+ul.archive h4 {
+	font-size: 11pt;
+	font-weight: normal;
+	font-style: italic;
+}
+
 ul.archive.years {
 	padding: 0;
 	margin: 0;
@@ -587,12 +622,14 @@ ul.archive.years li {
 ul.archive.months li {
 	border-radius: 3px;
 	margin: 8px 0 0;
+	padding-bottom: 4px;
 	background-color: #bcd3e0;
 }
 
 ul.archive.days li {
-	padding: 6px 8px 8px;
-	background-color: #83adc7;
+	border-style: none;
+	margin-bottom: 2px;
+	padding: 0;
 }
 
 ul.archive.posts {
@@ -600,9 +637,17 @@ ul.archive.posts {
 	margin-left: 35px;
 }
 
+ul.archive.posts a {
+	color: #11466d;
+}
+
 ul.archive.posts li {
 	border: none;
 	margin: 0;
 	padding: 0;
 	list-style-type: square;
+}
+
+ul.archive .archive-accordion h3, ul.archive .archive-accordion h2 {
+	cursor: pointer;
 }
