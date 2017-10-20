@@ -4,6 +4,11 @@ title = "Moe Serifu"
 enableRobotsTXT = true
 hasCJKLanguage = true
 
+[taxonomies]
+	tag = "tags"
+	category = "categories"
+	author = "authors"
+
 [params]
 	project = "Moe Serifu Agent"
 	tagline = "Cuteness & Curiosity"
