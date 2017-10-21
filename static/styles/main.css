@@ -429,6 +429,19 @@ article .panel-back-2 {
 	clear: both;
 }
 
+.after-post {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
 .preview-panel {
 	border: 4px #2a4968 solid;
 	border-radius: 8px 8px;
@@ -660,6 +673,17 @@ ul.archive .archive-accordion h3, ul.archive .archive-accordion h2 {
 
 h1.post-main {
 	margin-bottom: 3px;
+}
+
+article.post-main {
+	font-family: "Georgia", "Palatino", sans-serif;
+	line-height: 20pt;
+	font-size: 14pt;
+	color: #404040;
+}
+
+article.post-main p {
+	margin: 20pt 0;
 }
 
 .post-meta {

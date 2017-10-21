@@ -6,7 +6,7 @@
 		<p class="pubdate">Published: <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
 		<p>Author:{{ range .Params.authors }}<a class="taxonomy-link" href="/authors/{{ . | urlize }}">{{ . }}</a>{{ end }}</p>
 	</div>
-	<article>
+	<article class="post-main">
 		{{ .Content }}
 	</article>
 	<div class="post-meta">
@@ -14,6 +14,47 @@
 		<p>Tags:{{ range .Params.tags }}<a class="taxonomy-link" href="/tags/{{ . | urlize }}">{{ . }}</a>{{ end }}</p>
 	</div>
 	<hr />
+	{{ with .Next }}<a class="float-left" href="{{ .URL }}">&laquo; {{ .Title }}</a>{{ end }}
+	{{ with .Prev }}<a class="float-right" href="{{ .URL }}">{{ .Title }} &raquo;</a>{{ end }}
+	<div class="after-post"></div>
 	<div id="disqus_thread"></div>
+	<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT
+     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR
+     *  PLATFORM OR CMS.
+     *
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
+     *  https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function () {
+        // Replace PAGE_URL with your page's canonical URL variable
+				// TODO: changeMe to correct hugo var
+        this.page.url = {{ .URL | absURL }};
+
+        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.identifier = {{ .UniqueID }};
+
+				this.page.title = "{{ .PublishDate.Format "2006" }}/{{ .PublishDate.Format "01" }}/{{ .PublishDate.Format "02" }}: {{ .Title }}";
+    };
+
+
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+
+        // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        s.src = 'https://moe-serifu.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+	</script>
+	<noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+	</noscript>
 </main>
 {{ end }}
