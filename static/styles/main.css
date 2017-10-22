@@ -712,11 +712,17 @@ article.post-main p {
 	margin-left: 5px;
 }
 
-.disqus-comment-count {
+.comment-count {
 	font-family: "Trebuchet MS", Verdana, sans-serif;
 	text-transform: uppercase;
 	font-size: 11pt;
 	display: block;
 	margin: 20px 0 20px 8px;
 	color: #c11919;
+}
+
+.comment-count img {
+	display: inline;
+	margin-right: 10px;
+	vertical-align: bottom;
 }
