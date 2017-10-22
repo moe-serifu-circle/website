@@ -46,5 +46,8 @@
 				{{ partial "footer/site-footer.html" . }}
 			{{ end }}
 		</div>
+		{{ block "end-scripts" . }}
+		<!-- no scripts in the default baseof -->
+		{{ end }}
 	</body>
 </html>

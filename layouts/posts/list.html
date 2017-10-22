@@ -31,9 +31,13 @@
 				{{ .Summary }}
 			</div>
 			<hr class="title-divider" />
+			<span class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></span>
 		</article>
 	</div>
 	{{ end }}
 	<div class="float-clear"></div>
 </main>
+{{ end }}
+{{ define "end-scripts" }}
+	<script id="dsq-count-scr" src="//moe-serifu.disqus.com/count.js" async></script>
 {{ end }}

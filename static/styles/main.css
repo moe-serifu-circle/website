@@ -475,6 +475,14 @@ article .panel-back-2 {
 	float: left;
 }
 
+.preview-panel-container.blog .preview-panel-content {
+		font-family: "Georgia", "Palatino", sans-serif;
+		line-height: 20pt;
+		font-size: 12pt;
+		color: #404040;
+		padding-bottom: 0;
+}
+
 .preview-panel-container.tweets, .preview-panel-container.archive {
 	width: 38%;
 	min-width: 190px;
@@ -702,4 +710,13 @@ article.post-main p {
 
 .taxonomy-link {
 	margin-left: 5px;
+}
+
+.disqus-comment-count {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	text-transform: uppercase;
+	font-size: 11pt;
+	display: block;
+	margin: 20px 0 20px 8px;
+	color: #c11919;
 }

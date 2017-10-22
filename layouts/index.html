@@ -23,7 +23,7 @@
 			{{ $posts := ($.Site.GetPage "section" "posts").Pages.ByPublishDate.Reverse }}
 			{{ range first 1 $posts }}
 			<div class="preview-panel-content">
-				<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+				<h2><a href="{{ .URL }}">{{ .Title }}</a></h2>
 				<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
 				{{ .Content }}
 			</div>
