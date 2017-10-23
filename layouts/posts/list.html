@@ -24,14 +24,14 @@
 			<div class="title">
 				<h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
 				<div class="float-clear"></div>
-				<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
+				<img src="/images/icons/clock.png" class="time" width="20px" /> <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
 			</div>
 			<hr class="title-divider" />
 			<div class="preview-panel-content">
 				{{ .Summary }}
 			</div>
 			<hr class="title-divider" />
-			<div class="comment-count"><img src="/images/icons/comments.png" width="20px" /><span class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></span></div>
+			<a class="comment-count" href="{{ .URL }}#disqus_thread"><img src="/images/icons/comments.png" width="20px" /><span class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></span></a>
 		</article>
 	</div>
 	{{ end }}

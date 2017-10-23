@@ -715,6 +715,7 @@ article.post-main p {
 .comment-count {
 	font-family: "Trebuchet MS", Verdana, sans-serif;
 	text-transform: uppercase;
+	text-decoration: none;
 	font-size: 11pt;
 	display: block;
 	margin: 20px 0 20px 8px;
@@ -725,4 +726,20 @@ article.post-main p {
 	display: inline;
 	margin-right: 10px;
 	vertical-align: bottom;
+}
+
+.title img.time {
+	float: none;
+	vertical-align: bottom;
+	margin: 10px 0 0 20px;
+}
+
+.preview-panel-container.blog .preview-panel.top-level time {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.preview-panel-container.blog .preview-panel.top-level .title a {
+	color: #245987;
+	font-weight: bold;
 }
