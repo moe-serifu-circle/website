@@ -8,8 +8,8 @@
 	{{ end }}
 	<hr />
 	<ul class="font-sans-title">
-		{{- range .Data.Pages -}}
-		<li>{{ .Date.Format "2006-01-02" }} &mdash; <a href="{{ .URL }}">{{ .Title }}</a></li>
+		{{- range .Data.Terms.ByCount -}}
+		<li><a href="/{{ $.Data.Plural }}/{{ .Name | urlize }}">{{ replace .Name "-" " " | title }}</a> &mdash; {{ .Count }} Page{{ if ne .Count 1 }}s{{ end }}</li>
 		{{ end }}
 	</ul>
 </main>

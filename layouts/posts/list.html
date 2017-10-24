@@ -1,6 +1,9 @@
 {{ define "main" }}
 <main>
-	<h1>{{ .Title }}</h1>
+	<h1 class="with-under">{{ .Title }}</h1>
+	<div class="subtype-links">
+		<a href="/categories">Categories</a> | <a href="/tags">Tags</a> | <a href="/authors">Authors</a>
+	</div>
 	<div class="preview-panel-container right archive">
 		<div class="anchor"></div>
 		<div class="arm"></div>
