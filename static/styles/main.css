@@ -683,6 +683,10 @@ h1.post-main {
 	margin-bottom: 3px;
 }
 
+h1.after-breadcrumbs {
+	margin-top: 2px;
+}
+
 article.post-main {
 	font-family: "Georgia", "Palatino", sans-serif;
 	line-height: 20pt;
