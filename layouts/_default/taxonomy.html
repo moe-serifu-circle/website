@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+	<div class="breadcrumbs">
+		<a href="/posts">Blog</a> &raquo; <a href="/{{ .Data.Plural }}">{{ .Data.Plural | title }}</a> &raquo;
+	</div>
+	<h1>{{ .Title }}</h1>
+	{{ if .Content }}
+	<article>
+		{{ .Content }}
+	</article>
+	{{ end }}
+	<hr />
+	<ul class="font-sans-title">
+		{{- range .Data.Pages -}}
+		<li>{{ .Date.Format "2006-01-02" }} &mdash; <a href="{{ .URL }}">{{ .Title }}</a></li>
+		{{ end }}
+	</ul>
+</main>
+{{ end }}
