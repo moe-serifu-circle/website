@@ -193,6 +193,10 @@ footer {
 	top: -10px;
 }
 
+footer a {
+	color: #0a4775;
+}
+
 /* These divs has no semantic purpose; they are used for styling only */
 div.content-wrap {
 	margin-right: 5px;
@@ -297,6 +301,10 @@ header .hf-wrap {
 div.hf-inner-horz-edge {
 	background-image: url('/images/horz-edge.png');
 	height: 8px;
+}
+
+footer div.hf-inner-horz-edge {
+	margin-top: 20px;
 }
 
 .pos-anchor {
