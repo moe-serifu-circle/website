@@ -21,6 +21,7 @@
 	</head>
 	<body>
 		<div class="body-wrap">
+			{{ block "pre-header" . }}{{ $.Scratch.Set "CurMenuItem" "" }}{{ end }}
 			{{ block "header" . }}
 				{{ partial "header/site-header.html" . }}
 			{{ end }}

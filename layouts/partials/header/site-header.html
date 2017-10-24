@@ -9,12 +9,12 @@
 					<!-- Start of content -->
 					<div class="text-inline">
 						<h1>{{ .Site.Params.project }}</h1><br />
-						<h2>{{ .Site.Params.tagline }}</h2>
+						<h2 id="tagline">{{ .Site.Params.tagline }}</h2>
 					</div>
 					<img class="logo" src="/images/chibi.png" />
 					<nav>
 						{{- range .Site.Menus.main -}}
-						<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+						<a {{ if eq ($.Scratch.Get "CurMenuItem") .Identifier }}class="current-menu-item"{{ end }} href="{{ .URL }}">{{ .Name }}</a>{{ end }}
 					</nav>
 					<!-- end of content -->
 				</div>
