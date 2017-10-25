@@ -6,9 +6,9 @@
 	<div class="panels-container">
 		{{- range $index, $panel := $.Site.Data.panels -}}
 		<article class="panel">
-			<h1>{{ $panel.title }}</h1>
+			<h1><a href="/about">{{ $panel.title }}</a></h1>
 			<div class="panel-back-{{ $index }}">
-				<img src="/images/{{ $panel.image }}" />
+				<a href="/about"><img src="/images/{{ $panel.image }}" /></a>
 			</div>
 		</article>{{ end }}
 	</div>

@@ -351,6 +351,11 @@ article.panel h1 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62a2c4', endColorstr='#234668',GradientType=0 ); /* IE6-9 */
 }
 
+article.panel a {
+	color: #d2f9ff;
+	text-decoration: none;
+}
+
 article.panel img {
 	border-style: none solid solid;
 	border-width: 1px;
