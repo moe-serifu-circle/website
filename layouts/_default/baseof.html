@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>{{ block "title" . }}{{ .Site.Title }} :: {{ .Title }}{{ end }}</title>
-		<link rel="stylesheet" href="/styles/main.css" />
+		{{ partial "open-graph.html" . }}		<meta property="og:type" content="{{ block "og-type" . }}website{{ end }}" />
+		{{ block "og-extra-tags" . -}}{{- end }}		<link rel="stylesheet" href="/styles/main.css" />
 		<link rel="stylesheet" href="/styles/wrap3col.css" />
 		<link rel="stylesheet" href="/styles/hf-side.css" />
 		<link rel="shortcut icon" href="/favicon.ico" />
