@@ -1,4 +1,7 @@
+{{ define "og-description" }}{{ .Summary }}{{ end }}
+
 {{ define "pre-header" }}{{ $.Scratch.Set "CurMenuItem" (.Title | lower) }}{{ end }}
+
 {{ define "main" }}
 <main>
 	<h1 class="post-main">{{ .Title }}</h1>

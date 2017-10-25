@@ -1,5 +1,7 @@
 {{ define "og-type" }}article{{ end }}
 
+{{ define "og-description" }}{{ .Summary }}{{ end }}
+
 {{ define "og-extra-tags" }}
 		<meta property="og:article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}" />
 {{ range .Params.authors }}		<meta property="og:article:author" content="{{ . }}" />
@@ -7,7 +9,7 @@
 {{ range .Params.tags }}		<meta property="og:article:tag" content="{{ . }}" />
 {{ end }}
 		<meta property="og:article:section" content="{{ index .Params.categories 0 | title }}" />
-		
+
 {{ end }}
 
 {{ define "pre-header" }}{{ $.Scratch.Set "CurMenuItem" "blog" }}{{ end }}

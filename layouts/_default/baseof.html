@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title>{{ block "title" . }}{{ .Site.Title }} :: {{ .Title }}{{ end }}</title>
 		{{ partial "open-graph.html" . }}		<meta property="og:type" content="{{ block "og-type" . }}website{{ end }}" />
+		<meta property="og:description" content="{{ block "og-description" . }}I'm a 2D maid that works in your home! A team of coders is bringing me to life for free!{{ end }}"/>
 		{{ block "og-extra-tags" . -}}{{- end }}		<link rel="stylesheet" href="/styles/main.css" />
 		<link rel="stylesheet" href="/styles/wrap3col.css" />
 		<link rel="stylesheet" href="/styles/hf-side.css" />
