@@ -1,7 +1,9 @@
 {{ define "pre-header" }}{{ $.Scratch.Set "CurMenuItem" (.Title | lower) }}{{ end }}
 {{ define "main" }}
 <main>
-	<article>
+	<h1 class="post-main">{{ .Title }}</h1>
+	<hr />
+	<article class="post-main">
 		{{ .Content }}
 	</article>
 </main>

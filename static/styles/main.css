@@ -776,3 +776,7 @@ main h1.with-under {
 a.current-menu-item {
 	text-decoration: underline;
 }
+
+.article-pic.float-left {
+	margin: 0 20px 0 10px;
+}
