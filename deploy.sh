@@ -19,17 +19,15 @@
 #                                                                              #
 ################################################################################
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+ERROR_GIT=1
+ERROR_FS=2
+ERROR_HUGO=3
+ERROR_ARGS=4
 
 deploy_repo=moe-serifu-circle/moe-serifu-circle.github.io
 deploy_branch=master
 deploy_dir=.build
 publish_dir=public
-
-ERROR_GIT=1
-ERROR_FS=2
-ERROR_HUGO=3
-ERROR_ARGS=4
 
 function error()
 {
@@ -62,6 +60,11 @@ function check_permissions()
 		exit 1
 	fi
 }
+
+# make sure we're on the master branch
+[ "$(git rev-parse --abbrev-ref HEAD)" = "master" ] || { error "not on master branch; deploy cancelled" ; exit $ERROR_GIT ; }
+
+echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # get commit message to use
 message_set=
