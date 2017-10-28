@@ -28,3 +28,8 @@ hasCJKLanguage = true
 	identifier = "about"
 	url = "/about/"
 	weight = 3
+[[menu.main]]
+	name = "Join the Crew"
+	identifier = "join"
+	url = "/join/"
+	weight = 4
