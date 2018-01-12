@@ -11,6 +11,7 @@ html {
 	background-position: 20px 10px;
 	background-attachment: fixed;
 	image-rendering: -webkit-optimize-contrast;
+	overflow-y: scroll;
 }
 
 body {
