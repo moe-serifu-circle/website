@@ -6,8 +6,7 @@ type: top
 Interested in joining Moe Serifu Circle? We are looking for volunteers to
 become contributors to the project! All levels of skill are accepted.
 
-If you would like to help out, join the crew's [Facebook group](https://www.facebook.com/groups/MoeSerifuCircle),
-or sign up at our [Google form](https://goo.gl/forms/64xkgwX9hYDz18CX2).
+If you would like to help out, join the crew's [Discord](https://discord.gg/URAA8SF).
 
 The general time commitment is attending a meeting once every two weeks. If
 you are in the area, physical presence is preferred, but if you can't make it,
