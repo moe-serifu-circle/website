@@ -2,7 +2,7 @@ pipeline:
     get-deps:
         image: docker:git
         commands:
-            - "git clone git@github.com:moe-serifu-circle/moe-serifu-circle.github.io.git public"
+            - "git clone https://github.com/moe-serifu-circle/moe-serifu-circle.github.io public"
 
     generate:
         image: cbrgm/drone-hugo:0.40.2
