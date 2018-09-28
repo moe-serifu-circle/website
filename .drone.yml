@@ -11,6 +11,15 @@ pipeline:
         when:
             event: push
             branch: master
+    
+    write-version:
+        image: docker:git
+        when:
+            event: push
+            branch: master
+        commands:
+            - "git log -1 --pretty=%B >> public/version-history.txt"
+            - "echo ----------------------------------------------- >> public/version-history.txt"
 
     publish:
         image: appleboy/drone-git-push:latest
@@ -24,5 +33,6 @@ pipeline:
         author_email: "bot@moeserifu.moe"
         when:
             event: push
+            branch: master
         secrets:
             - git_push_ssh_key
