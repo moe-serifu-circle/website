@@ -3,6 +3,7 @@ pipeline:
         image: docker:git
         when:
             event: push
+            branch: master
         commands:
             - "git clone https://github.com/moe-serifu-circle/moe-serifu-circle.github.io public"
 
@@ -12,6 +13,7 @@ pipeline:
         validate: true
         when:
             event: push
+            branch: master
     
     write-version:
         image: docker:git
