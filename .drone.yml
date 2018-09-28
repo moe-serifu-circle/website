@@ -17,10 +17,12 @@ pipeline:
         branch: master
         path: public
         remote: "git@github.com:moe-serifu-circle/moe-serifu-circle.github.io"
+        remote_name: 
         commit: true
         commit_message: "[drone] Added generated website"
         author_name: "MSC Service Account"
         author_email: "bot@moeserifu.moe"
         when:
             event: push
-            branch: master
+        secrets:
+            - git_push_ssh_key
