@@ -4,7 +4,7 @@ date: 2017-07-26T06:53:32-05:00
 type: top
 ---
 Oh! Hi there, Master! My name is Masa-chan, and I'm your personal maid! I'm here
-to tell you all about the Moe Serifu Agent system, and what it can do for you.
+to tell you all about the Moe Serifu Agent system, and what it can do for you!
 I'm so happy to meet you. I hope we can be friends!<!--more-->
 
 <img class="article-pic float-left" src="/images/vsign.png" title="V-sign!" alt="Masa-chan giving the V-Sign" />
