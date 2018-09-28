@@ -1,6 +1,9 @@
 pipeline:
     get-deps:
         image: docker:git
+        when:
+            event: push
+            branch: master
         commands:
             - "git clone https://github.com/moe-serifu-circle/moe-serifu-circle.github.io public"
 
