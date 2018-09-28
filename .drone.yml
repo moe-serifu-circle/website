@@ -21,3 +21,6 @@ pipeline:
         commit_message: "[drone] Added generated website"
         author_name: "MSC Service Account"
         author_email: "bot@moeserifu.moe"
+        when:
+            event: push
+            branch: master
